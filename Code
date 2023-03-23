@@ -1,0 +1,33 @@
+int redLED1 = 8;
+int redLED2 = 9;
+int redLED3 = 10;
+int greenLED1 = 6;
+int on1 = 2000;
+
+void setup() {
+  pinMode(redLED1, OUTPUT);
+  pinMode(redLED2, OUTPUT);
+  pinMode(redLED3, OUTPUT);
+  pinMode(greenLED1 ,OUTPUT);
+   digitalWrite(redLED1,HIGH);
+   delay(on1);
+   digitalWrite(redLED2,HIGH);
+    delay(on1);
+   digitalWrite(redLED3,HIGH);
+ }
+
+
+   
+
+
+void loop() {
+     for(int x = 0; x <= 255; x= x +1){
+    analogWrite(greenLED1, x);
+    delay(4);
+    analogWrite(greenLED1, x);
+    }
+ 
+    for (int y = 255; y >= 0; y = y - 1){
+        analogWrite(greenLED1, y);
+        delay(4);
+        analogWrite(greenLED1, y);
